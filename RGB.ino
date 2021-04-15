@@ -26,14 +26,14 @@ void loop() {
     nactiPole(&nactenePole[0]);
     vypisPole(&nactenePole[0]);
   }
-  nastavBarvu(5, 153, 182);
+  nastavBarvu();
   delay(20);
 }
  
-void nastavBarvu(uint8_t red, uint8_t green, uint8_t blue) {
-  analogWrite(CERVENA, red);
-  analogWrite(ZELENA, green);
-  analogWrite(MODRA, blue);
+void nastavBarvu() {
+  analogWrite(CERVENA, barva.cervena);
+  analogWrite(ZELENA, barva.zelena);
+  analogWrite(MODRA, barva.modra);
 }
 
 bool prislaData() {
