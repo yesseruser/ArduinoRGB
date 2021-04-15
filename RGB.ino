@@ -29,7 +29,7 @@ void loop() {
   nastavBarvu();
   delay(20);
 }
- 
+
 void nastavBarvu() {
   analogWrite(CERVENA, barva.cervena);
   analogWrite(ZELENA, barva.zelena);
@@ -85,10 +85,10 @@ void vypisPole(char *pole) {
 void dekodujZpravu(char * pole){
   barva.cervena = prevedZnakNaCislo(pole[1]) * 16;
   barva.cervena += prevedZnakNaCislo(pole[2]);
-  
+
   barva.zelena = prevedZnakNaCislo(pole[3]) * 16;
   barva.zelena += prevedZnakNaCislo(pole[4]);
-  
+
   barva.modra = prevedZnakNaCislo(pole[5]) * 16;
   barva.modra += prevedZnakNaCislo(pole[6]);
 }
