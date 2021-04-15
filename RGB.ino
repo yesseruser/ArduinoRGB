@@ -83,5 +83,23 @@ void vypisPole(char *pole) {
   }
 }
 void dekodujZpravu(char * pole){
+  barva.cervena = prevedZnakNaCislo(pole[1]) * 16;
+  barva.cervena += prevedZnakNaCislo(pole[2]);
   
+  barva.zelena = prevedZnakNaCislo(pole[3]) * 16;
+  barva.zelena += prevedZnakNaCislo(pole[4]);
+  
+  barva.modra = prevedZnakNaCislo(pole[5]) * 16;
+  barva.modra += prevedZnakNaCislo(pole[6]);
+}
+
+int prevedZnakNaCislo(char znak){
+  int prevedeneCislo = 0;
+  if (znak >= '0' && znak <= '9'){
+    prevedeneCislo - znak - '0';
+  }else if (znak >= 'a' && znak <= 'f'){
+    prevedeneCislo = 10 + znak - 'a';
+  }else{
+    prevedeneCislo = 10 + znak - 'A';
+  }
 }
