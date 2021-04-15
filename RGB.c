@@ -83,4 +83,5 @@ void vypisPole(char *pole) {
   }
 }
 void dekodujZpravu(char * pole){
+  
 }
